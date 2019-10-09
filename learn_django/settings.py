@@ -56,6 +56,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
+        #app里面的模板文件夹是有效的
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
