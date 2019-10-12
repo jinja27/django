@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,render_to_response
 from django.http import HttpResponse
 #对应第七点
 from .models import Article
@@ -13,3 +13,10 @@ def article_detail(request,article_id):
     #为了分离前后端代码而注释
     #return HttpResponse("<h2>文章标题：%s</h2><br>文章内容：%s" % (article.title,article.intend))
     #return HttpResponse("文章id为：%s" % article_id)
+
+
+def article_list(request):
+    article111=Article.objects.all()
+    context={}
+    context['articles']=article111
+    return render_to_response("article_list.html",context)

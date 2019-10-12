@@ -1,0 +1,9 @@
+<html>
+    <head></head>
+    <body>
+        <!-- 这里是django中的标准表达方法，里面存放的是变量-->
+        {% for n in articles %}
+            <a href="/first_app/{{n.pk}}">{{n.title}}</a>
+        {% endfor %}
+    </body>
+</html>
